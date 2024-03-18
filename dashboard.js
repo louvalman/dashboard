@@ -1,4 +1,4 @@
-const h1 = document.querySelector('.test');
+const theElements = document.querySelectorAll('.test');
 
 function green(element) {
   element.classList.add('green');
@@ -10,10 +10,12 @@ function red(element) {
   element.classList.remove('green');
 }
 
-h1.addEventListener('mouseover', function () {
-  green(h1);
-});
+theElements.forEach(function (element) {
+  element.addEventListener('mouseover', function () {
+    green(element);
+  });
 
-h1.addEventListener('mouseleave', function () {
-  red(h1);
+  element.addEventListener('mouseleave', function () {
+    red(element);
+  });
 });
