@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOP: Admin Dashboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
     <script defer src="dashboard.js"></script>
   </head>
   <body>
@@ -12,31 +15,98 @@
       <header>
         <div class="header-top">
           <div class="searchbar">
-            <div class="icon">iconhere</div>
+            <div class="icon">SeachIcon</div>
             <input type="text" name="search" id="search" />
           </div>
           <div class="profile">
-            <div class="icon">notification icon here</div>
-            <div class="avatar">avatar here</div>
-            <div class="profile-name">Nameson</div>
+            <div class="icon">BellIcon</div>
+            <div class="avatar">AvatarIcon</div>
+            <div class="profile-name">Name</div>
           </div>
         </div>
-        <!-- Header top content goes here -->
         <div class="header-bottom">
           <div class="test">Hi there, name</div>
         </div>
-        <!-- Header bottom elements can go here -->
       </header>
 
-      <nav>
-        <!-- Side navigation content goes here -->
-        <h1>Dashboard</h1>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Settings</a></li>
-          <!-- Add more navigation items as needed -->
+      <nav class="sidebar">
+        <div class="logo-content">
+          <div class="logo">
+            <i class="bx bxs-balloon"></i>
+            <div class="logo_name">BalloonDev</div>
+          </div>
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search..." />
+            <!-- <span class="tooltip">Dashboard</span> -->
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-grid-alt"></i>
+              <span class="links-name">Dashboard</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-user"></i>
+              <span class="links-name">User</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-chat"></i>
+              <span class="links-name">Messages</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-pie-chart-alt"></i>
+              <span class="links-name">Analytics</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-folder"></i>
+              <span class="links-name">File Manager</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-cart-alt"></i>
+              <span class="links-name">Orders</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-heart"></i>
+              <span class="links-name">Saved</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-cog"></i>
+              <span class="links-name">Settings</span>
+              <!-- <span class="tooltip">Dashboard</span> -->
+            </a>
+          </li>
         </ul>
+        <div class="profile-content">
+          <div class="profile">
+            <div class="profile-details">
+              <img src="profile-alt.jpg" alt="" />
+            </div>
+          </div>
+        </div>
       </nav>
 
       <main>
