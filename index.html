@@ -8,6 +8,7 @@
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/zmg7yvw.css" />
     <script defer src="dashboard.js"></script>
   </head>
   <body>
@@ -30,81 +31,88 @@
       </header>
 
       <nav class="sidebar">
-        <div class="logo-content">
-          <div class="logo">
-            <i class="bx bxs-balloon"></i>
-            <div class="logo_name">BalloonDev</div>
+        <div class="logo-navlist-container">
+          <div class="logo-content">
+            <div class="logo">
+              <i class="bx bxs-dashboard"></i>
+              <div class="logo-name">A Dashboard</div>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
           </div>
-          <i class="bx bx-menu" id="btn"></i>
+          <ul class="nav-list">
+            <li>
+              <i class="bx bx-search"></i>
+              <input type="text" placeholder="Search" />
+              <span class="tooltip">Search</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-grid-alt"></i>
+                <span class="links-name">Dashboard</span>
+                <span class="tooltip">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-user"></i>
+                <span class="links-name">User</span>
+                <span class="tooltip">User</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-chat"></i>
+                <span class="links-name">Messages</span>
+                <span class="tooltip">Messages</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-pie-chart-alt"></i>
+                <span class="links-name">Analytics</span>
+                <span class="tooltip">Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-folder"></i>
+                <span class="links-name">File Manager</span>
+                <span class="tooltip">File Manager</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-cart-alt"></i>
+                <span class="links-name">Orders</span>
+                <span class="tooltip">Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-heart"></i>
+                <span class="links-name">Saved</span>
+                <span class="tooltip">Saved</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-cog"></i>
+                <span class="links-name">Settings</span>
+                <span class="tooltip">Settings</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="nav-list">
-          <li>
-            <i class="bx bx-search"></i>
-            <input type="text" placeholder="Search..." />
-            <!-- <span class="tooltip">Dashboard</span> -->
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-grid-alt"></i>
-              <span class="links-name">Dashboard</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-user"></i>
-              <span class="links-name">User</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-chat"></i>
-              <span class="links-name">Messages</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-pie-chart-alt"></i>
-              <span class="links-name">Analytics</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-folder"></i>
-              <span class="links-name">File Manager</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-cart-alt"></i>
-              <span class="links-name">Orders</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-heart"></i>
-              <span class="links-name">Saved</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bx bx-cog"></i>
-              <span class="links-name">Settings</span>
-              <!-- <span class="tooltip">Dashboard</span> -->
-            </a>
-          </li>
-        </ul>
         <div class="profile-content">
           <div class="profile">
             <div class="profile-details">
-              <img src="profile-alt.jpg" alt="" />
+              <img src="assets/profile.jpg" alt="" />
+              <div class="profile-container">
+                <div class="name">Louis Dyrhauge</div>
+                <div class="job">UX/UI</div>
+              </div>
             </div>
+            <i class="bx bx-log-out" id="log-out"></i>
           </div>
         </div>
       </nav>
