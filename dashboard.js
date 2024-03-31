@@ -1,21 +1,28 @@
-const theElements = document.querySelectorAll('.test');
+let btn = document.querySelector('#btn');
+let sidebar = document.querySelector('.sidebar');
+let searchBtn = document.querySelector('.bx-search');
+let adminContainer = document.querySelector('.admin-dashboard-container');
 
-function green(element) {
-  element.classList.add('green');
-  element.classList.remove('red');
+function active(element) {
+  element.classList.toggle('active');
+  adminContainer.classList.toggle('active');
+  btn.classList.toggle('bx-x');
+
+  if (btn.classList.contains('bx-x')) {
+    btn.style.fontSize = '24px';
+  } else {
+    btn.style.fontSize = '20px';
+  }
 }
 
-function red(element) {
-  element.classList.add('red');
-  element.classList.remove('green');
+if (btn.classList.contains('bx-x')) {
+  btn.fontSize;
 }
 
-theElements.forEach(function (element) {
-  element.addEventListener('mouseover', function () {
-    green(element);
-  });
+btn.addEventListener('click', function () {
+  active(sidebar);
+});
 
-  element.addEventListener('mouseleave', function () {
-    red(element);
-  });
+searchBtn.addEventListener('click', function () {
+  active(sidebar);
 });
