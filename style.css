@@ -410,6 +410,13 @@ section {
     grid-template-columns: 1fr;
 }
 
+.projects-content {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
 .project-cards {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
