@@ -291,6 +291,7 @@ header {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
+    height: 100%;
 }
 
 header>.header-top {
@@ -394,7 +395,7 @@ main {
     grid-template-columns: 2fr 1fr;
     background: var(--text-color);
     color: var(--sidebar-background);
-    padding: 8px 60px;
+    padding: 60px;
     height: 100%;
 
 }
@@ -412,14 +413,14 @@ section {
 
 .projects-content {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 72px 1fr;
     grid-template-columns: 1fr;
     height: 100%;
 }
 
 .project-cards {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     height: 100%;
@@ -436,6 +437,12 @@ section {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: 72px auto;
 }
 
 .announcement-list,
