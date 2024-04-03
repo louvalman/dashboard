@@ -1,7 +1,4 @@
 :root {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
     font-family: "franklin-gothic-urw", sans-serif;
     --sidebar-background: #042A2B;
     --sidebar-secondary: #C9F2C7;
@@ -9,6 +6,12 @@
     --text-color: #FBFBFF;
     --transition-cubic: all 0.3s cubic-bezier(0.65, 0.3, 0.73, 0.76);
     --box-shadow-cards: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -19,16 +22,24 @@ body {
     background-color: var(--text-color);
 }
 
+h2 {
+    margin-bottom: 16px;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
 .admin-dashboard-container {
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: auto 8fr;
     grid-template-columns: 78px 3fr;
     transition: var(--transition-cubic);
     min-height: 100vh;
 }
 
 .admin-dashboard-container.active {
-    grid-template-columns: 268px 3fr;
+    grid-template-columns: 260px 3fr;
 }
 
 .sidebar {
@@ -36,7 +47,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 50px;
+    width: 78px;
     background-color: var(--sidebar-background);
     padding: 6px 14px;
     transition: var(--transition-cubic);
@@ -89,7 +100,7 @@ body {
             input {
                 position: absolute;
                 height: 100%;
-                width: calc(100% - 50px);
+                width: 100%;
                 left: 0;
                 top: 0;
                 border-radius: 12px;
@@ -99,7 +110,6 @@ body {
                 font-size: 14px;
                 color: var(--sidebar-background);
                 padding-left: 48px;
-                padding-block: 0px;
             }
 
             .bx-search {
@@ -158,6 +168,7 @@ body {
     .profile-content {
         color: var(--sidebar-background);
         width: 100%;
+        height: 60px;
 
         .profile {
             position: relative;
@@ -168,7 +179,7 @@ body {
             border-radius: 12px;
             padding: 8px;
             margin-bottom: 12px;
-            height: 34px;
+            height: 50px;
 
             .profile-details {
                 display: flex;
@@ -206,7 +217,7 @@ body {
 }
 
 .sidebar.active {
-    width: 240px;
+    width: 260px;
 }
 
 .sidebar.active .logo-content .logo {
@@ -224,7 +235,7 @@ body {
 }
 
 .sidebar.active .bx-search:hover {
-    background: var(--sidebar-secondary);
+    background: transparent;
     color: var(--sidebar-background);
 }
 
@@ -246,7 +257,7 @@ body {
 .sidebar.active .profile {
     display: flex;
     justify-content: space-between;
-    height: 42px;
+    height: 100%;
 }
 
 input::placeholder {
@@ -381,6 +392,8 @@ header>.header-bottom {
         gap: 16px;
 
         .btn-1 {
+            width: 80px;
+            text-align: center;
             padding: 8px 16px;
             background: var(--sidebar-background);
             color: var(--text-color);
@@ -415,7 +428,7 @@ section {
 
 .projects-content {
     display: grid;
-    grid-template-rows: 64px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
     height: 100%;
 }
@@ -429,7 +442,7 @@ section {
 }
 
 .card {
-    border-radius: 2px;
+    border-radius: 8px;
     border-left: 8px solid var(--sidebar-secondary);
     box-shadow: var(--box-shadow-cards);
     padding: 24px;
@@ -452,18 +465,55 @@ section {
 
 .news {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-columns: 1fr;
+}
+
+.divider {
+    border-bottom: solid 0.5px lightgray;
+    margin: 0px 16px;
+
 }
 
 .announcements,
 .trending {
     display: grid;
-    grid-template-rows: 64px auto;
+    grid-template-rows: auto 1fr;
 }
 
 .announcement-list,
 .trending-list {
     box-shadow: var(--box-shadow-cards);
     height: auto;
+    border-radius: 8px;
+}
+
+.trending-list {
+    padding: 12px 0px;
+}
+
+.announcement {
+    padding: 24px;
+}
+
+.trending-item {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .trending-img {
+        height: 52px;
+        width: 52px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 16px;
+        }
+    }
+
+    p {
+        color: gray;
+    }
 }
