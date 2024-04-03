@@ -137,13 +137,14 @@ body {
                     position: absolute;
                     left: 122px;
                     top: 0;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-45%, -50%);
                     border-radius: 6px;
                     height: 35px;
-                    width: 122px;
-                    background: var(--text-color);
-                    color: var(--sidebar-background);
-                    line-height: 35px;
+                    width: 116px;
+                    background: var(--sidebar-background);
+                    color: var(--text-color);
+                    font-weight: 500;
+                    line-height: 34px;
                     text-align: center;
                     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
                     transition: 0s;
@@ -198,6 +199,7 @@ body {
                 min-width: 24px;
                 font-size: 20px;
                 border-radius: 12px;
+                cursor: pointer;
             }
         }
     }
@@ -431,6 +433,21 @@ section {
     border-left: 8px solid var(--sidebar-secondary);
     box-shadow: var(--box-shadow-cards);
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .icons {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 8px;
+        height: 100%;
+
+        i {
+            cursor: pointer;
+            font-size: 18px;
+        }
+    }
 }
 
 .news {
