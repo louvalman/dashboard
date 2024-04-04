@@ -321,6 +321,13 @@ header>.header-top {
         i {
             display: flex;
             font-size: 22px;
+            transition: all 0.25 ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+                transition: all 0.25 ease-in-out;
+            }
         }
 
         .avatar img {
@@ -378,9 +385,18 @@ header>.header-bottom {
             span {
                 font-size: 22px;
 
+                a {
+                    text-decoration: none;
+                }
+
                 span {
                     color: var(--sidebar-third);
                     font-size: 18px;
+
+                    &:hover {
+                        color: var(--sidebar-background);
+                    }
+
                 }
             }
         }
@@ -396,10 +412,16 @@ header>.header-bottom {
             width: 80px;
             text-align: center;
             padding: 8px 16px;
-            background: var(--sidebar-background);
-            color: var(--text-color);
+            background: transparent;
+            color: var(--sidebar-background);
             border-radius: 12px;
-            cursor: pointer;
+            border: solid 1px var(--sidebar-background);
+
+            &:hover {
+                background: var(--sidebar-background);
+                color: var(--text-color);
+                cursor: pointer;
+            }
         }
     }
 }
