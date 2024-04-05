@@ -411,15 +411,15 @@ header>.header-bottom {
         .btn-1 {
             width: 80px;
             text-align: center;
-            padding: 8px 16px;
-            background: transparent;
-            color: var(--sidebar-background);
-            border-radius: 12px;
+            padding: 8px 12px;
+            background: var(--sidebar-background);
+            color: var(--text-color);
+            border-radius: 8px;
             border: solid 1px var(--sidebar-background);
 
             &:hover {
-                background: var(--sidebar-background);
-                color: var(--text-color);
+                background: transparent;
+                color: var(--sidebar-background);
                 cursor: pointer;
             }
         }
